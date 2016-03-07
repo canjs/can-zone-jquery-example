@@ -71,5 +71,7 @@ app.get("/api/todos", function(req, res){
 	}, 5);
 });
 
-app.listen(8080);
-console.error("Listening on port", 8080);
+var port = process.env.PORT || 8080;
+
+app.listen(port);
+console.error("Listening on port", port);
