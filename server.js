@@ -16,8 +16,9 @@ function makeLoc(props){
 
 function makeDoc(){
 	return jsdom("<html><head><title>jQuery app</title></head>" +
-					"<body><script src='node_modules/steal/steal.js'>" +
-					"</script></body></html>");
+					"<body><script src='node_modules/steal/steal" +
+          (process.env.NODE_ENV === "production" ? ".production.js' main='index'>"
+            : ".js'>") + "</script></body></html>");
 }
 var doc = global.document = makeDoc();
 global.window = doc.defaultView;

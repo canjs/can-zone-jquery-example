@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "steal-tools"
   },
   "author": "",
   "license": "MIT",
@@ -20,5 +21,8 @@
   },
   "system": {
     "npmAlgorithm": "flat"
+  },
+  "devDependencies": {
+    "steal-tools": "^0.14.0"
   }
 }
