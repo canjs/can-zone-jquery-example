@@ -1,6 +1,6 @@
 var $ = require("jquery");
-var Zone = require("can-wait");
-var xhr = require("can-wait/xhr");
+var Zone = require("can-zone");
+var xhr = require("can-zone/xhr");
 var isNode = require("detect-node");
 
 $.fn.home = function(){

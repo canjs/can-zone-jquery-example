@@ -27,13 +27,14 @@ global.location = makeLoc();
 
 var render = require("./index");
 var $ = require("jquery");
-var Zone = require("can-wait");
+var Zone = require("can-zone");
 
 var url = require("url");
 var express = require("express");
 var app = express();
 
 app.use(express.static(__dirname));
+app.enable("trust proxy");
 
 function route(req, res){
 	var location = makeLoc({
@@ -50,7 +51,7 @@ function route(req, res){
 			window: doc.defaultView,
 			location: location
 		},
-		plugins: [require("can-wait/xhr")]
+		plugins: [require("can-zone/xhr")]
 	});
 
 	zone.run(render).then(function(data){

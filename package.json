@@ -11,7 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "can-wait": "^0.3.0",
+    "can-zone": "^0.4.0",
     "detect-node": "^2.0.3",
     "express": "^4.13.4",
     "jquery": "^2.2.1",
