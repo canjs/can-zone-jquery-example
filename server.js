@@ -1,7 +1,8 @@
+var assign = require("object-assign");
 var jsdom = require("jsdom").jsdom;
 
-function makeLoc(){
-	return {
+function makeLoc(props){
+	return assign({
 		href: '',
 		protocol: '',
 		host: '',
@@ -10,7 +11,7 @@ function makeLoc(){
 		pathname: '',
 		search: '',
 		hash: ''
-	};
+	}, props||{});
 }
 
 function makeDoc(){
@@ -34,8 +35,11 @@ var app = express();
 app.use(express.static(__dirname));
 
 function route(req, res){
-	var location = makeLoc();
-	location.pathname = url.parse(req.url).pathname;
+	var location = makeLoc({
+    host: req.get("host"),
+    pathname: url.parse(req.url).pathname,
+    protocol: req.protocol + ":"
+  });
 
 	var doc = makeDoc();
 

@@ -10,7 +10,8 @@ $.fn.home = function(){
 
 $.fn.todos = function(){
 	this.html("Loading...");
-	$.get("http://localhost:8080/api/todos").then(function(todos){
+  var url = location.protocol + "//" + location.host + "/api/todos";
+	$.get(url).then(function(todos){
 		this.html("");
 		todos.forEach(function(todo){
 			this.append("<li>" + todo.todo + "</li>");
