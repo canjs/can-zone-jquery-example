@@ -11,18 +11,18 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "can-zone": "^0.4.0",
+    "can-zone": "^0.6.7",
     "detect-node": "^2.0.3",
     "express": "^4.13.4",
-    "jquery": "^2.2.1",
-    "jsdom": "^8.0.4",
+    "jquery": "^3.2.1",
+    "jsdom": "^10.1.0",
     "object-assign": "^4.0.1",
-    "steal": "^0.14.0"
+    "steal": "^1.5.2"
   },
   "system": {
     "npmAlgorithm": "flat"
   },
   "devDependencies": {
-    "steal-tools": "^0.14.0"
+    "steal-tools": "^1.3.3"
   }
 }
